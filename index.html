@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">  
+        <link rel="stylesheet" media="screen" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> 
+        <link rel="stylesheet" media="screen" href="css/style.css"> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+        <script src="js/trello2datatables.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="" onclick="toggleVisibility('home');">trello2datatables</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="#about" onclick="toggleVisibility('about');">More Info</a></li>
+                            <li>
+                                <form id="boardForm" action="index.html" method="GET">
+                                    <input type="text" name="board" value="508721606e02bb9d570016ae" />
+                                    <input type="submit" value="Get board">
+                                </form>
+                            </li>
+                        </ul>
+
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="home" class="container section">
+
+            <h1><span id="boardname">Trello board name</span></h1>
+            <p><span id="boarddesc">Here goes the board description.</span></p>
+            <table id="datatable">
+                <thead><tr>
+                        <th>Name</th>
+                        <th>List</th>
+                        <th>Votes</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <!-- /container -->
+        <div class="container section" id="about">
+            <h1>trello2datatables</h1>
+            <p>A very simplistic approach to display a <a href="https://trello.com/">trello</a> board as a list.<br />Simply enter a board ID in the input box above and enjoy a tabular view of the trello board.</p>
+            <p>trello2datatables was created by <a href="http://stephan-hochhaus.de">Stephan Hochhaus</a>.</p>
+        </div>
+    </body>
+</html>
